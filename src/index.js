@@ -34,7 +34,10 @@ const Book = () => {
       />
       <h2>{title}</h2>
       <h4>{author}</h4>
-      <p>{6*6}</p>
+      {/* this work */}
+      <p>{6 * 6}</p>
+      {/* this wont work */}
+      {/* <p>{let x = 33}</p> */}
     </article>
   )
 }
