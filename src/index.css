@@ -19,12 +19,25 @@ body {
   gap: 2rem;
   /* background-color: blue; */
 }
+.book {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
 
 .book img {
   width: 100%;
   object-fit: cover;
 }
 
+.book h4 {
+  /* this wont work */
+  /* due to there is an available styling in inline */
+  color: red;
+  /* will work */
+  letter-spacing: 2px;
+}
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(2, 1fr);
