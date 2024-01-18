@@ -3,41 +3,26 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
+const title = 'Interesting Facts for Curious Minds'
+const author = 'Jordan Moore'
+const img = './images/book-1.jpg'
+
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
     </section>
   )
 }
 
-const Book = () => {
-  const title = 'Interesting Facts for Curious Minds'
-  const author = 'Jordan Moore'
-
+const Book = (props) => {
+  console.log(props)
   return (
     <article className="book">
-      <img
-        src="./images/book-1.jpg"
-        alt="Interesting Facts for Curious Minds"
-      />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-      {/* this work */}
-      <p>{6 * 6}</p>
-      {/* this wont work */}
-      {/* <p>{let x = 33}</p> */}
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}s</h4>
     </article>
   )
 }
