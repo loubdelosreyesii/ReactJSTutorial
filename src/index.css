@@ -32,11 +32,12 @@ body {
 }
 
 .book h4 {
-  /* this wont work */
-  /* due to there is an available styling in inline */
-  color: red;
   /* will work */
   letter-spacing: 2px;
+
+  color: '#617d98';
+  font-size: '0.75rem';
+  margin-top: '0.5rem';
 }
 @media screen and (min-width: 768px) {
   .booklist {
