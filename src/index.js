@@ -1,24 +1,43 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-//Lesson 01: Creating a Component.
-//React component should start with Capital Letter.
-//Creating a component, think of creating a function.
-//IMPORTANT NOTE: RETURN ONLY 1 PARENT ELEMENT
-function Greeting2() {
+import './index.css'
+
+const BookList = () => {
   return (
-    <React.Fragment>
-      <Person />
-      <Message />
-    </React.Fragment>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-const Person = () => <h2>Loucas II</h2>
-const Message = () => {
-  return <p>This is my message</p>
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
 }
+
+const Image = () => (
+  <img src="./images/book-1.jpg" alt="Interesting Facts for Curious Minds" />
+)
+const Title = () => <h2>Interesting Facts for Curious Minds</h2>
+const Author = () => <h4>Jordan Moore</h4>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Greeting2 />)
+root.render(<BookList />)
